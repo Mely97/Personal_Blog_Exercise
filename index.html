@@ -13,10 +13,10 @@
       <div class="menuToggle"></div>
     </header>
     <ul class="navigation">
-      <li><a href="#home" onclick="toggleMenu();">Home</a></li>
-      <li><a href="#about" onclick="toggleMenu();">About</a></li>
-      <li><a href="#post" onclick="toggleMenu();">Post</a></li>
-      <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#post" onclick="toggleMenu()">Post</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
     </ul>
 
     <!-- Banner -->
@@ -25,7 +25,7 @@
       <div class="contentBx">
         <h2>The Soul of the world</h2>
         <h4>A simple blog website</h4>
-        <a href="#" class="btn">About us</a>
+        <a href="#about" class="btn">About us</a>
       </div>
     </section>
 
@@ -212,7 +212,7 @@
         </div>
       </div>
       <div class="title">
-        <a href="#" class="btn mgt60">Load More</a>
+        <a href="" class="btn mgt60">Load More</a>
       </div>
     </section>
 
@@ -226,14 +226,25 @@
           voluptatum. Aut officiis vitae neque!
         </p>
       </div>
+
       <div class="contactForm">
         <div class="row">
-          <input type="text" name="" placeholder="First Name" />
-          <input type="text" name="" placeholder="Last Name" />
+          <input type="text" name="firstName" placeholder="First Name" />
+          <input type="text" name="lastName" placeholder="Last Name" />
         </div>
         <div class="row">
-          <input type="text" name="" placeholder="Email Address" />
-          <input type="text" name="" placeholder="Phone Number" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+          />
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="Phone Number"
+            pattern="^[9|8|7|6]\d{8}$"
+          />
         </div>
         <div class="row2">
           <textarea placeholder="Message"></textarea>
@@ -273,7 +284,7 @@
 
       //now, we will fix navigation issue...menu close after clicked any link
 
-      function toogleMenu() {
+      function toggleMenu() {
         menuToggle.classList.remove("active");
         navigation.classList.remove("active");
       }
